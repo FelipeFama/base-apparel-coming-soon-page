@@ -69,19 +69,34 @@ body {
    form {
     display: flex;
     grid-area: form;
+    position: relative;
+    width: 100%;
+    label {
+      border-width: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      position: absolute !important;
+      white-space: nowrap !important;
+      width: 1px !important;
+    }
     input {
-      padding: 10px 20px;
+      padding: 16px 20px;
       border: 1px solid $desaturated-red;
       border-radius: 30px;
-      color: $desaturated-red;
+      color: $dark-grayish-red;
       font-size: $font-size;
       position: relative;
       outline: none;
       width: 100%;
+      &::placeholder {
+        color: $desaturated-red;
+      }
     }
     button {
       padding: 13px 35px 10px;
-      background: $gradient2;
+      background: $soft-red;
       background-position: center;
       background-size: cover;
       border: 0;
@@ -90,7 +105,39 @@ body {
       position: relative;
       z-index: 2;
       left: -60px;
+      &:hover {
+        cursor: pointer;
+        background: $gradient2;
+        box-shadow:0 15px 20px -3px;
+      }
     }
+    .error-message {
+      display: none;
+      position: absolute;
+      padding-top: 60px;
+      padding-left: 21px;
+      width: 100%;
+      color: $soft-red;
+      &.is-validated {
+        input:invalid {
+          border: 1.5px solid $soft-red;
+          .error-message {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            &::before {
+              content: '';
+              width: 24px;
+              height: 24px;
+              background: url('../images/icon-error.svg');
+              margin-top: -46px;
+              margin-right: 180px;
+            }
+          }
+        }
+      }
+    }
+    
    }
   }
 
