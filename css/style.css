@@ -1,10 +1,1 @@
-/*Typography*/
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
-/*Colors*/
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}/*# sourceMappingURL=style.css.map */
+@import"https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap";*,*::after,*::before{box-sizing:border-box;margin:0;padding:0}body{display:grid;grid-template-columns:56% 1fr;grid-template-areas:"main cover";height:100vh;font-family:"Josefin Sans",sans-serif;font-size:1rem;font-weight:400;background:url(../images/bg-pattern-desktop.svg) center center no-repeat;background-size:cover}body main{grid-area:main;height:100%;padding:8vh 10vw}body main .logo{grid-area:logo}body main .cover-mobile{display:none}body main .text{grid-area:text;width:80%}body main .text h1{font-size:4rem;font-weight:300;letter-spacing:1rem;color:#ce9797;text-transform:uppercase;margin:120px 0 30px}body main .text b{color:#413a3a;font-weight:400}body main .text p{color:#ce9797;margin-bottom:1.8rem;line-height:1.75rem}body main form{display:flex;grid-area:form}body main form input{padding:10px 20px;border:1px solid #ce9797;border-radius:30px;color:#ce9797;font-size:1rem;position:relative;outline:none;width:100%}body main form button{padding:13px 35px 10px;background:linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));background-position:center;background-size:cover;border:0;border-radius:30px;box-shadow:0 0 10px 5px rgba(206,151,151,.4);position:relative;z-index:2;left:-60px}body section{grid-area:cover;background:url(../images/hero-desktop.jpg) center center no-repeat;height:100%;background-size:cover}/*# sourceMappingURL=style.css.map */

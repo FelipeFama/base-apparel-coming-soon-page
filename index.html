@@ -6,35 +6,29 @@
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<main>
-   <figure class="logo">
-     <img src="./images/logo.svg" alt="Basel Apparel">
-   </figure>
-   <picture class="banner">
-     <img src="./images/hero-mobile.jpg" alt="Banner">
-   </picture>
-  <section class="text-content">
-    <h1>
-     We're 
-     <b>coming</b>
-     <b>soon</b>
-    </h1>
-    <p>
-     Hello fellow shoppers! We're currently building our new fashion store. 
-     Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-  </section>
-    <form action="" id="subscribeForm">
-      <input type="email" name="email" placeholder="Email Address" />
-      <button type="button">
+ <main>
+   <img class="logo" src="./images/logo.svg" alt="Basel Apparel" />
+   <img class="cover-mobile" src="./images/hero-mobile.jpg" alt="mobile banner" />
+   <div class="text">
+     <h1>
+       We're 
+       <b>coming</b>
+       <b>soon</b>
+     </h1>
+     <p>
+       Hello fellow shoppers! We're currently building our new fashion store. 
+       Add your email below to stay up-to-date with announcements and our launch deals.
+     </p>
+   </div>
+   <form>
+     <input type="email" name="email" placeholder="Email Address" required />
+     <button type="submit">
        <img src="./images/icon-arrow.svg" alt="submit">
-      </button>
-    </form>
-  </main>
+     </button>
+   </form>
+ </main>
+ <section class="cover"></section>
 </body>
 </html>

@@ -8,7 +8,6 @@ $font-weight-semibold: 600;
 
 /*Colors*/
 $desaturated-red: hsl(0, 36%, 70%);
-$light-pink: hsla(0, 36%, 70%, 0.7);
 $soft-red: hsl(0, 93%, 68%);
 $dark-grayish-red: hsl(0, 6%, 24%);
 $gradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
@@ -23,5 +22,83 @@ $banner-img: url(../images/hero-desktop.jpg);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 56% 1fr;
+  grid-template-areas: 'main cover';
+  height: 100vh;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight-regular;
+  background: $pattern-img center center no-repeat;
+  background-size: cover;
+
+  main {
+   grid-area: main;
+   height: 100%;
+   padding: 8vh 10vw;
+   .logo {
+    grid-area: logo;
+   }
+   .cover-mobile {
+    display: none;
+   }
+   .text {
+    grid-area: text;
+    width: 80%;
+    h1 {
+      font-size: 4rem;
+      font-weight: $font-weight-light;
+      letter-spacing: 1rem;
+      color: $desaturated-red;
+      text-transform: uppercase;
+      margin: 120px 0 30px;
+    }
+    b {
+      color: $dark-grayish-red;
+      font-weight: $font-weight-regular;
+    }
+    p {
+      color: $desaturated-red;
+      margin-bottom: 1.8rem;
+      line-height: 1.75rem;
+    }
+   }
+   form {
+    display: flex;
+    grid-area: form;
+    input {
+      padding: 10px 20px;
+      border: 1px solid $desaturated-red;
+      border-radius: 30px;
+      color: $desaturated-red;
+      font-size: $font-size;
+      position: relative;
+      outline: none;
+      width: 100%;
+    }
+    button {
+      padding: 13px 35px 10px;
+      background: $gradient2;
+      background-position: center;
+      background-size: cover;
+      border: 0;
+      border-radius: 30px;
+      box-shadow: 0 0 10px 5px hsla(0, 36%, 70%, .4);
+      position: relative;
+      z-index: 2;
+      left: -60px;
+    }
+   }
+  }
+
+  section {
+    grid-area: cover;
+    background: $banner-img center center no-repeat;
+    height: 100%;
+    background-size: cover;
+  }
 }
 
