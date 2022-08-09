@@ -34,19 +34,20 @@ body {
   font-weight: $font-weight-regular;
   background: $pattern-img center center no-repeat;
   background-size: cover;
-
   main {
    grid-area: main;
    height: 100%;
-   padding: 8vh 10vw;
+   padding: 4vh 10vw;
    .logo {
     grid-area: logo;
+    margin-top: 2rem;
    }
    .cover-mobile {
     display: none;
    }
    .text {
     grid-area: text;
+    margin-top: -3rem;
     width: 80%;
     h1 {
       font-size: 4rem;
@@ -64,6 +65,7 @@ body {
       color: $desaturated-red;
       margin-bottom: 1.8rem;
       line-height: 1.75rem;
+      width: 27rem;
     }
    }
    form {
@@ -71,81 +73,57 @@ body {
     grid-area: form;
     position: relative;
     width: 100%;
-    label {
-      border-width: 0 !important;
-      clip: rect(1px, 1px, 1px, 1px) !important;
-      height: 1px !important;
-      overflow: hidden !important;
-      padding: 0 !important;
-      position: absolute !important;
-      white-space: nowrap !important;
-      width: 1px !important;
-    }
-    input {
-      padding: 16px 20px;
-      border: 1px solid $desaturated-red;
-      border-radius: 30px;
-      color: $dark-grayish-red;
-      font-size: $font-size;
-      position: relative;
-      outline: none;
-      width: 100%;
-      &::placeholder {
-        color: $desaturated-red;
+     input {
+       padding: 16px 20px;
+       border: 1px solid $desaturated-red;
+       border-radius: 30px;
+       color: $dark-grayish-red;
+       font-size: $font-size;
+       position: relative;
+       outline: none;
+       width: 100%;
+       &::placeholder {
+         color: $desaturated-red;
+       }
       }
+      button {
+       padding: 13px 35px 10px;
+       background: $soft-red;
+       background-position: center;
+       background-size: cover;
+       border: none;
+       border-radius: 30px;
+       box-shadow: 0 0 10px 5px hsla(0, 36%, 70%, .4);
+       position: relative;
+       z-index: 2;
+       left: -60px;
+       &:hover {
+         cursor: pointer;
+         background: $gradient2;
+         box-shadow:0 15px 20px -3px;
+       }
+     }
+     .icon-error {
+       display: none;
+       position: absolute;
+       left: 10rem;
+       top: 1rem;
+     }
+     .error-message {
+       display: none;
+       position: absolute;
+       padding-top: 60px;
+       padding-left: 21px;
+       width: 100%;
+       color: $soft-red;
+     }
     }
-    button {
-      padding: 13px 35px 10px;
-      background: $soft-red;
-      background-position: center;
-      background-size: cover;
-      border: 0;
-      border-radius: 30px;
-      box-shadow: 0 0 10px 5px hsla(0, 36%, 70%, .4);
-      position: relative;
-      z-index: 2;
-      left: -60px;
-      &:hover {
-        cursor: pointer;
-        background: $gradient2;
-        box-shadow:0 15px 20px -3px;
-      }
-    }
-    .error-message {
-      display: none;
-      position: absolute;
-      padding-top: 60px;
-      padding-left: 21px;
-      width: 100%;
-      color: $soft-red;
-      &.is-validated {
-        input:invalid {
-          border: 1.5px solid $soft-red;
-          .error-message {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            &::before {
-              content: '';
-              width: 24px;
-              height: 24px;
-              background: url('../images/icon-error.svg');
-              margin-top: -46px;
-              margin-right: 180px;
-            }
-          }
-        }
-      }
-    }
-    
-   }
   }
 
   section {
     grid-area: cover;
-    background: $banner-img center center no-repeat;
+    background: $banner-img center no-repeat;
     height: 100%;
     background-size: cover;
   }
 }
-
